@@ -1,0 +1,101 @@
+.card {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: $grayish-blue 0px 25px 60px -20px,
+    $grayish-blue 0px 15px 30px -30px;
+
+  &__figure {
+    @include flex(row, center, center);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+  }
+
+  &__section {
+    @include flex(column, flex-start, flex-start);
+    gap: 14px;
+  }
+
+  &__content {
+    @include flex(column, flex-start, flex-start);
+    gap: 20px;
+    padding: 40px 32px 20px;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+    color: $dark-grayish-blue;
+    // text-wrap: balance;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    letter-spacing: 0.01em;
+  }
+
+  &__box {
+    position: relative;
+    @include flex(row, space-between, center);
+    width: 100%;
+    height: 65px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  &__list {
+    @include flex(row, flex-start, flex-start);
+    gap: 18px;
+  }
+
+  &__thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-weight: $font-weight-bold;
+    color: $dark-grayish-blue;
+  }
+}
+
+@include desktop-screen {
+  .card {
+    @include flex(row, flex-start, flex-start);
+    width: 730px;
+    height: 280px;
+
+    &__figure {
+      min-width: 285px;
+      height: 280px;
+      border-radius: 10px 0 0 10px;
+    }
+
+    &__drawer {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    &__section {
+      @include flex(column, flex-start, flex-start);
+      gap: 14px;
+      padding: 32px 40px;
+      height: 280px;
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 18px;
+      // text-wrap: balance;
+      letter-spacing: 0.06em;
+    }
+
+    &__box {
+      padding: 0;
+    }
+  }
+}

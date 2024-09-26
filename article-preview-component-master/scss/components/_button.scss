@@ -1,0 +1,25 @@
+.button {
+  @include flex(row, center, center);
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: $desaturated-blue;
+
+    &--active {
+      fill: $white;
+    }
+  }
+
+  &--active {
+    background-color: $desaturated-blue;
+  }
+}

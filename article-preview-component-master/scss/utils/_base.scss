@@ -1,0 +1,51 @@
+body {
+  display: grid;
+  grid-template-rows: 2rem 1fr 2rem;
+  grid-template-areas:
+    "."
+    "main"
+    "footer";
+  height: 100dvh;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight-medium;
+  line-height: 1.5;
+
+  text-align: left;
+  color: $desaturated-blue;
+  background-color: $light-grayish-blue;
+}
+
+h1,
+h2 {
+  display: none;
+}
+main {
+  grid-area: main;
+  place-self: center;
+}
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.attribution {
+  grid-area: footer;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.arrow {
+  width: 200px;
+  height: 200px;
+  color: blueviolet;
+}
+
+.ionicon {
+  width: 200px;
+  height: 200px;
+  fill: blue;
+}
